@@ -1,6 +1,7 @@
 #include <iostream>
 #include <raylib.h>
 #include <grid.h>
+#include <blocks.cpp>
 
 using namespace std;
 
@@ -16,12 +17,6 @@ int main ()
     SetTargetFPS(60);
 
     Grid grid = Grid();
-    
-    grid.grid[0][0] = 1;
-    grid.grid[10][0] = 3;
-    grid.grid[0][10] = 4;
-    grid.grid[5][5] = 7;
-
 
     while(!WindowShouldClose())
     {

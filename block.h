@@ -2,6 +2,7 @@
 #include <vector>
 #include <map>
 #include "position.h"
+#include "colors.h"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ private:
 
     int cellSize;
     int rotationState;
+    vector<Color> colors;
 
 public:
 
@@ -19,6 +21,5 @@ public:
     map<int, vector<Position>> cells;
 
     Block();
-
-
+    void Draw();
 };
