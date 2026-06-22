@@ -13,13 +13,18 @@ private:
 
     int cellSize;
     int rotationState;
+    int rowOffset;
+    int colOffset;
     vector<Color> colors;
 
 public:
 
     int ID;
-    map<int, vector<Position>> cells;
 
+    map<int, vector<Position>> cells;
     Block();
+    
     void Draw();
+    void Move(int rows, int cols);
+    vector<Position> GetCellPosition();
 };

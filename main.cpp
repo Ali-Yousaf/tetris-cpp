@@ -1,7 +1,7 @@
 #include <iostream>
 #include <raylib.h>
-#include <grid.h>
-#include <blocks.cpp>
+#include "game.h"
+#include "colors.h"
 
 using namespace std;
 
@@ -16,14 +16,14 @@ int main ()
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Tetris");
     SetTargetFPS(60);
 
-    Grid grid = Grid();
+    Game game = Game();
 
     while(!WindowShouldClose())
     {
         BeginDrawing();
         ClearBackground(DARK_BLUE);
 
-        grid.Draw();
+        game.Draw();
 
         EndDrawing();
     }
